@@ -11,7 +11,7 @@
       $.get("/products/" + nextId + "/data", function(data) {
         $(".productName").text(data["name"]);
         $(".productPrice").text(data["price"]);
-        $(".product")
+        $(".productDescription").text(data["description"])
       })
     })
   })
