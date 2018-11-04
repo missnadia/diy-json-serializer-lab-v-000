@@ -11,8 +11,10 @@
       $.get("/products/" + nextId + "/data", function(data) {
         $(".productName").text(data["name"]);
         $(".productPrice").text(data["price"]);
-        $(".productDescription").text(data["description"])
-      })
-    })
-  })
+        $(".productInventory").text(data["inventory"])
+        $(".productDescription").text(data["description"]);
+        $(".js-next").attr("data-id", data["id"]);
+      });
+    });
+  });
 </script>
